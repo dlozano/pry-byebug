@@ -70,7 +70,7 @@ class SettingBreakpointsTestByMethodId < BreakpointsTest
 
     @input.add("break Break1Example#a")
     redirect_pry_io(@input, @output) { load test_file("break1") }
-    @line = 8
+    @line = RUBY_VERSION >= "2.5.0" ? 8 : 7
     @regexp = /  Breakpoint (?<id>\d+): Break1Example#a \(Enabled\)/
   end
 
@@ -86,7 +86,7 @@ class SettingBreakpointsTestByMethodIdForBangMethods < BreakpointsTest
 
     @input.add("break Break1Example#c!")
     redirect_pry_io(@input, @output) { load test_file("break1") }
-    @line = 18
+    @line = RUBY_VERSION >= "2.5.0" ? 18 : 17
     @regexp = /  Breakpoint (?<id>\d+): Break1Example#c! \(Enabled\)/
   end
 

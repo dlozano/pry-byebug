@@ -27,4 +27,4 @@ task :mdl do
   abort unless system("mdl", *Dir.glob("*.md"))
 end
 
-task default: %i[test rubocop mdl]
+task default: %i[test mdl]

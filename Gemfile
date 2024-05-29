@@ -9,7 +9,7 @@ group :development do
 
   gem "chandler", "0.9.0"
   gem "mdl", "0.11.0"
-  gem "minitest", "~> 5.14"
+  gem "minitest", "~> 5.13"
   gem "minitest-bisect", "~> 1.5"
   gem "rubocop", "~> 1.0"
 end
